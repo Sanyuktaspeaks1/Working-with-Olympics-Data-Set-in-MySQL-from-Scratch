@@ -20,6 +20,14 @@ Click Next.
 
 # Let`s learn how we can play with this dataset using some questions:
 
+To replace blank values with NA
+```diff
+UPDATE your_table_name
+SET your_column_name = 'NA'
+WHERE TRIM(your_column_name) = '';
+```
+
+
 # 1. Which countries hosted the most Olympic Games?
 Thoughts that could come to your mind:
 You want to display country Coloumn ( so SELECT COUNTRY )
