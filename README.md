@@ -22,9 +22,10 @@ Click Next.
 
 To replace blank values with NA
 ```diff
-UPDATE your_table_name
-SET your_column_name = 'NA'
-WHERE TRIM(your_column_name) = '';
+UPDATE games
+SET `Cost, Billion USD` = NULL
+WHERE `Cost, Billion USD` = '' OR `Cost, Billion USD` = '**';
+
 ```
 
 
