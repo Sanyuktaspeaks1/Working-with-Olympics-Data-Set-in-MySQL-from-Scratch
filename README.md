@@ -27,7 +27,10 @@ SET `Cost, Billion USD` = NULL
 WHERE `Cost, Billion USD` = '' OR `Cost, Billion USD` = '**';
 
 ```
-
+# Commad to remove safe mode
+```diff
+SET SQL_SAFE_UPDATES=0;
+```
 
 # 1. Which countries hosted the most Olympic Games?
 Thoughts that could come to your mind:
