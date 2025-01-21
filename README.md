@@ -1,7 +1,7 @@
 # Working-with-Olympics-Data-Set-in-MySQL-from-Scratch
 You will get to know the common mistakes and then how to correct them as you progress.
 
-# Let`s learn how to load a csv file in MySQL
+# :brain: Let`s learn how to load a csv file in MySQL
 Step 1: Create or Select a Database
 Open MySQL Workbench.
 Create a new database or select an existing one.
