@@ -21,7 +21,7 @@ Click Next.
 # Let`s learn how we can play with this dataset using some questions:
 
 To replace blank values with NA
-```diff
+```sql
 UPDATE games
 SET `Cost, Billion USD` = NULL
 WHERE `Cost, Billion USD` = '' OR `Cost, Billion USD` = '**';
