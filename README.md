@@ -28,7 +28,7 @@ WHERE `Cost, Billion USD` = '' OR `Cost, Billion USD` = '**';
 
 ```
 # Commad to remove safe mode
-```diff
+```sql
 SET SQL_SAFE_UPDATES=0;
 ```
 
@@ -63,7 +63,7 @@ ORDER BY num_olympics DESC: This sorts the result in descending order of the num
 
 # 2 What is the average number of athletes per Olympic Games, grouped by season (Winter/Summer)?
 ## Caution
-```diff
+```sql
 - COUNT(*): Can be used to count all rows in a table or group, including those with NULL values.
 You cannot use * with other aggregate functions like SUM(), AVG(), MIN(), etc.,
 because they require a specific column to perform calculations on.
@@ -75,7 +75,7 @@ because they require a specific column to perform calculations on.
 
 # 4 What is the total cost of hosting the games by country (in billions USD)?
 ## Caution
-```diff
+```sql
 - Coloumn name in csv file had a space in it Cost, Billion USD which will give syntax errors later to avoid that we will change the column name for that we use ALTER 
 ```
 ```dif
@@ -86,7 +86,7 @@ CHANGE COLUMN `Cost, Billion USD` Cost DECIMAL(10, 7);
 SHOW COLUMNS FROM Games;
 
 ```
-```diff
+```sql
 select country,sum(cost) as total_cost
 from games
 group by country;
@@ -105,7 +105,7 @@ SELECT MAX(Athletes) FROM Games
 
 To display both the game with the maximum number of athletes and the game with the minimum number of athletes in the same output, you can use a UNION query
 
-```
+```sql
 SELECT 'Max' AS Type, Games, Athletes
 FROM Games
 WHERE Athletes = (SELECT MAX(Athletes) FROM Games)
